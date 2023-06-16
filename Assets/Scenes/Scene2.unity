@@ -123,6 +123,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &522089712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1410135244457419354, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_Name
+      value: pellet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528444929914188988, guid: a7a752f3f4980414e88532250424700d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2104914417885604029, guid: a7a752f3f4980414e88532250424700d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a7a752f3f4980414e88532250424700d, type: 3}
 --- !u!1 &593143517
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +363,27 @@ Transform:
   m_Father: {fileID: 593143520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1127756209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410135244457419354, guid: a7a752f3f4980414e88532250424700d, type: 3}
+  m_PrefabInstance: {fileID: 522089712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1127756213
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127756209}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1182971101
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +505,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1398380393}
   - component: {fileID: 1398380395}
-  - component: {fileID: 1398380394}
+  - component: {fileID: 1398380396}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -449,18 +528,6 @@ Transform:
   m_Father: {fileID: 753834974}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1398380394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398380392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a902dd06fd23a4e44bda2d0911ee34a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1398380395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -513,6 +580,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1398380396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398380392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020b0715a49437b4da8fecbb0699bf46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelletPrefab: {fileID: 1127756209}
+  muzzlePoint: {fileID: 1398380393}
+  pelletSpeed: 1000
+  fireRate: 0.2
 --- !u!1 &1863366527
 GameObject:
   m_ObjectHideFlags: 0
