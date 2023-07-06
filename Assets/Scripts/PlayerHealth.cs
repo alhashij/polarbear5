@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int playerhealth = 3;
+    public static int playerhealth = 3;
 
     public Image[] threehearts;
 

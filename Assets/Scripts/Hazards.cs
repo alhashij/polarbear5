@@ -25,6 +25,8 @@ public class Hazards : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+        //reloads scene when player collides into object when using static UnityEngine.SceneManagement.SceneManager
         if (collision.CompareTag("Player"))
         {
             LoadScene(GetActiveScene().buildIndex);
