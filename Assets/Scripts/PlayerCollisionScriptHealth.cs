@@ -8,17 +8,8 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
     {
         if(collision.transform.tag == "Hazard")
         {
-            /*PlayerHealth.playerhealth--;
-            if (PlayerHealth.playerhealth <= 0)
-            {
-                PlayerManager.GameOverScreen = true;
-            }*/
-
             PlayerManager.GameOverScreen = true;
-            gameObject.SetActive(false);
-
-            Debug.Log("incontact");
-
+            Debug.Log("Test");
         }
     }
 }
