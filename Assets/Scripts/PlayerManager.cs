@@ -33,8 +33,8 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    //public void LevelReset()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //}
+    public void LevelReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

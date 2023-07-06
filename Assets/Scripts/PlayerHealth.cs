@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public static int playerhealth = 3;
+    public static int maxplayerhealth = 3;
 
     public Image[] threehearts;
 
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             img.sprite = noHeart;
         }
-        for (int i = 0; i < playerhealth; i++)
+        for (int i = 0; i < maxplayerhealth; i++)
         {
             threehearts[i].sprite = Heart;
         }
