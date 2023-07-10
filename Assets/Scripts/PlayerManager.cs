@@ -9,9 +9,14 @@ public class PlayerManager : MonoBehaviour
     public static bool GameOverScreen;
     public GameObject gameOver;
 
+    public static Vector2 lastCheckpointPosition = new Vector2(-110,0);
+
     private void Awake()
     {
         GameOverScreen = false;
+        //returns that game object
+        GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckpointPosition;
+        Debug.Log("player is in contact with checkpoint position");
     }
 
     // Start is called before the first frame update
