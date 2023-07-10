@@ -17,7 +17,7 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //detects collision
     {
         if (collision.transform.CompareTag("Hazard") && !isColliding && canTakeDamage)
         {
@@ -37,7 +37,7 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
             {
                 StartCoroutine(EnableDamage()); // Enable damage after a delay
                 StartCoroutine(DisableMovementForSeconds(2f)); // Disable player movement for 2 seconds
-                ResetToCheckpointPosition(); // Reset the player to the checkpoint position
+                //ResetToCheckpointPosition(); // Reset the player to the checkpoint position
             }
         }
     }
