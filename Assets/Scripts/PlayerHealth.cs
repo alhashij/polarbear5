@@ -15,6 +15,13 @@ public class PlayerHealth : MonoBehaviour
     public Sprite noHeart;
 
 
+
+    private void Awake()
+    {
+        maxplayerhealth = 3; //everytime scene restarts, the three hearts will show up full. It basically resets the hearts everytime a player retrys
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
