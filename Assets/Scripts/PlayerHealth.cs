@@ -8,7 +8,9 @@ public class PlayerHealth : MonoBehaviour
 
     public static int maxplayerhealth = 3;
 
-    public Image[] threehearts;
+    public int health;
+
+    public Image[] threehearts; //array for the heart sprite
 
     public Sprite Heart;
 
@@ -32,13 +34,13 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         //when the player loses a heart(takes damage)
-        foreach (Image img in threehearts)
+        foreach (Image img in threehearts) //hearts array tha 
         {
-            img.sprite = noHeart;
+            img.sprite = noHeart; //image sprite is equal to no heart
         }
         for (int i = 0; i < maxplayerhealth; i++)
         {
-            threehearts[i].sprite = Heart;
+            threehearts[i].sprite = Heart; //image sprite is equal to full heart
         }
     }
 }
