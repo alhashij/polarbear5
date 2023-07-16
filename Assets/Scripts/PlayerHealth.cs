@@ -10,10 +10,10 @@ public class PlayerHealth : MonoBehaviour
 
     public int health;
 
-    public Image[] threehearts; //array for the heart sprite
 
+    //sprites
+    public Image[] threehearts; //array for the sprite
     public Sprite Heart;
-
     public Sprite noHeart;
 
 
@@ -23,12 +23,6 @@ public class PlayerHealth : MonoBehaviour
         maxplayerhealth = 3; //everytime scene restarts, the three hearts will show up full. It basically resets the hearts everytime a player retrys
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -43,4 +37,7 @@ public class PlayerHealth : MonoBehaviour
             threehearts[i].sprite = Heart; //image sprite is equal to full heart
         }
     }
+
+  
+
 }
