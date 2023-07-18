@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime *dir); //moves enemy right
-        if (transform.position.x < startingX || transform.position.x > startingX + range)
+        if (transform.position.x < startingX || transform.position.x > startingX + range) // if the position of the enemy is is less than starting point position or range
             dir *= -1;
     }
 }

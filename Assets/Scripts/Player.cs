@@ -19,6 +19,12 @@ public class Player : MonoBehaviour
     private bool isDashing = false;
     private float nextDashTime;
 
+    //Bullet gun variables
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
+    //[Range(0.1f, 1f)]
+    //[SerializeField] private float firerate = 0.5f;
+
     private void Start()
     {
         activeMoveSpeed = moveSpeed;
@@ -59,6 +65,18 @@ public class Player : MonoBehaviour
         {
             dashCoolCounter -= Time.deltaTime;
         }
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerShoot();
+        }
+
+    }
+
+    private void playerShoot()
+    {
+        Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
     }
 
     private void Dash(float moveDirection)
