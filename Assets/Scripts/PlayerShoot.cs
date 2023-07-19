@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    
     [Range(1, 10)]
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 10f;
 
     [Range(1, 10)]
-    [SerializeField] private float durationtime = 3f;
+    [SerializeField] private float durationTime = 3f;
 
+    private Vector2 shootDirection;
 
-    private Rigidbody2D rb;
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, durationtime);
+        Destroy(gameObject, durationTime);
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        shootDirection = (mousePosition - transform.position).normalized;
+
+        Debug.Log("shootDirection: " + shootDirection);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        rb.velocity = transform.up * speed; //bullet goes forward,the object moving in the upward direction with the given speed.
-
+        transform.Translate(shootDirection.normalized * speed * Time.deltaTime, Space.World);
     }
-
-
-
 }
+
+
+
