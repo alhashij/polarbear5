@@ -36,7 +36,7 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
             else
             {
                 StartCoroutine(EnableDamage()); // Enable damage after a delay
-                StartCoroutine(DisableMovementForSeconds(2f)); // Disable player movement for 2 seconds
+                //StartCoroutine(DisableMovementForSeconds(2f)); // Disable player movement for 2 seconds
                 //ResetToCheckpointPosition(); // Reset the player to the checkpoint position
             }
         }
@@ -48,12 +48,12 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
         canTakeDamage = true; // Enable damage
     }
 
-    private IEnumerator DisableMovementForSeconds(float seconds)
+    /*private IEnumerator DisableMovementForSeconds(float seconds)
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll; // Freeze player movement
         yield return new WaitForSeconds(seconds);
         rb.constraints = RigidbodyConstraints2D.None; // Unfreeze player movement
-    }
+    }*/
 
     private void OnCollisionExit2D(Collision2D collision)
     {
