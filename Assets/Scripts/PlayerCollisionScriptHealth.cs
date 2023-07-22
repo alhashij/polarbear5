@@ -19,7 +19,9 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) //detects collision
     {
-        if (collision.transform.CompareTag("Hazard") && !isColliding && canTakeDamage)
+        //if (collision.transform.CompareTag("Hazard") && !isColliding && canTakeDamage)
+            if ((collision.transform.CompareTag("Hazard") || collision.transform.CompareTag("Enemy")) && !isColliding && canTakeDamage)
+
         {
             isColliding = true;
             canTakeDamage = false; // Disable damage temporarily
