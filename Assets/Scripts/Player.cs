@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             isJumping = true;
         }
 
-        // Dash
+        // Dash 
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= nextDashTime)
         {
             Dash(moveDirection);
