@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public Animator playerAnimator;
+
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     private bool isJumping = false;
