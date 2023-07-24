@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 593143523}
   - component: {fileID: 593143524}
   - component: {fileID: 593143525}
+  - component: {fileID: 593143526}
   m_Layer: 0
   m_Name: PolarBear
   m_TagString: Player
@@ -788,7 +789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 593143525}
   moveSpeed: 5
-  jumpForce: 5
+  jumpForce: 7
   dashSpeed: 15
   dashLength: 0.5
   dashCooldown: 1
@@ -892,7 +893,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593143517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -962,6 +963,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!68 &593143526
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593143517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.786638, y: -3.8930535}
+  - {x: -5.5305843, y: -1.8485417}
+  - {x: -6.525343, y: -0.52995217}
+  - {x: -6.0932617, y: 1.6426665}
+  - {x: -4.912703, y: 3.3304665}
+  - {x: -3.0975938, y: 3.7534013}
+  - {x: -0.24697196, y: 3.1647258}
+  - {x: 2.12604, y: 3.4406903}
+  - {x: 3.4636657, y: 3.2395422}
+  - {x: 3.6127326, y: 3.474968}
+  - {x: 3.8911395, y: 3.6073103}
+  - {x: 4.3633456, y: 3.363196}
+  - {x: 5.6907096, y: 3.3318622}
+  - {x: 5.96296, y: 3.7501426}
+  - {x: 6.322119, y: 3.7772667}
+  - {x: 6.304026, y: 3.3905218}
+  - {x: 6.1214085, y: 3.2007797}
+  - {x: 6.349093, y: 3.1090133}
+  - {x: 6.729824, y: 2.319243}
+  - {x: 7.4213805, y: 2.2374544}
+  - {x: 7.2179885, y: 1.3896925}
+  - {x: 5.3621674, y: 0.8000875}
+  - {x: 4.054741, y: -0.20100349}
+  - {x: 3.743664, y: -3.5247755}
+  - {x: 4.3325605, y: -3.9110284}
+  - {x: 1.9766798, y: -3.9293509}
+  - {x: 0.7546555, y: -1.8614184}
+  - {x: 0.9067383, y: -1.5789587}
+  - {x: -1.4782526, y: -2.3686051}
+  - {x: -2.1756308, y: -3.5816576}
+  - {x: -1.6518223, y: -3.9381647}
+  - {x: -5.772958, y: -3.9086323}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &629225042
 GameObject:
   m_ObjectHideFlags: 0
