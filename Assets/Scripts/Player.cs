@@ -75,6 +75,8 @@ public class Player : MonoBehaviour
             playerShoot();
        }
 
+        //animator code
+        playerAnimator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
     }
 
     private void playerShoot()

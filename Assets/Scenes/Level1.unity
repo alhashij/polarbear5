@@ -766,6 +766,7 @@ GameObject:
   - component: {fileID: 593143522}
   - component: {fileID: 593143523}
   - component: {fileID: 593143524}
+  - component: {fileID: 593143525}
   m_Layer: 0
   m_Name: PolarBear
   m_TagString: Player
@@ -785,6 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5eddbea7d26de49a571a06c6ff52c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 593143525}
   moveSpeed: 5
   jumpForce: 5
   dashSpeed: 15
@@ -833,7 +835,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d0a1a61236a20345929d603ce32c37e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -852,8 +854,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593143517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -109.57, y: -2.86, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -108.9167, y: -3.4648, z: 0}
+  m_LocalScale: {x: 0.18215287, y: 0.15597683, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 753834974}
@@ -896,18 +898,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.53256273, y: -0.093281746}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 14.9, y: 7.92}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 13.886703, y: 7.654024}
   m_EdgeRadius: 0
 --- !u!114 &593143523
 MonoBehaviour:
@@ -940,6 +942,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe4b5223a20ca94f8706a749891f140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &593143525
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593143517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6c81b32a24f16b4f9febf21c6072aa4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &629225042
 GameObject:
   m_ObjectHideFlags: 0
