@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     private bool isDashing = false;
     private float nextDashTime;
 
+    //animator
+    //bool walkRight = true;
+
     //Bullet gun variables
    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
@@ -76,9 +79,16 @@ public class Player : MonoBehaviour
        }
 
         //animator code
-        playerAnimator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        playerAnimator.SetFloat("Speed", Mathf.Abs(moveDirection));
+        //if (walkRight && moveDirection < 0)
+           // FlipSprite();
     }
 
+    //private void FlipSprite()
+  //  {
+        //walkRight = !walkRight;
+       // transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+   // }
     private void playerShoot()
     {
         Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
@@ -119,4 +129,9 @@ public class Player : MonoBehaviour
             isJumping = true;
         }
     }
+
+
+    //animator code
+
+
 }

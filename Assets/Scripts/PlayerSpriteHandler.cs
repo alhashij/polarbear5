@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerSpriteHandler : MonoBehaviour
 {
     private Rigidbody2D body;
-    private Animator animator;
+    private Animator playerAnimator;
     private SpriteRenderer spriteRenderer;
 
     private float horizontalSpeed = 5f;
@@ -16,7 +16,7 @@ public class PlayerSpriteHandler : MonoBehaviour
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -35,7 +35,7 @@ public class PlayerSpriteHandler : MonoBehaviour
             isFacingRight = true;
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(body.velocity.x));
+        playerAnimator.SetFloat("Speed", Mathf.Abs(body.velocity.x));
     }
 
     private void FixedUpdate()
