@@ -10,6 +10,7 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
     private Vector3 checkpointPosition; // Store the checkpoint position
     private Rigidbody2D rb; // Reference to the player's Rigidbody2D component
 
+    
     private void Start()
     {
         spawnPosition = transform.position; // Store the initial spawn position
@@ -30,8 +31,9 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
 
             if (PlayerHealth.maxplayerhealth <= 0)
             {
+                //PlayerHealth.gameObject.heart1.SetActive(false);
                 PlayerManager.GameOverScreen = true;
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
 
                 Debug.Log("Player's health is now 0. Game over.");
             }
@@ -65,7 +67,7 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
         }
     }
 
-    private void ResetToCheckpointPosition()
+    /*private void ResetToCheckpointPosition()
     {
         rb.velocity = Vector2.zero; // Stop the player's current velocity
         transform.position = checkpointPosition; // Reset the player position to the checkpoint position
@@ -76,15 +78,15 @@ public class PlayerCollisionScriptHealth : MonoBehaviour
         checkpointPosition = position; // Set the checkpoint position to the provided position
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Checkpoint"))
-        {
-            CheckpointScript checkpoint = collision.GetComponent<CheckpointScript>();
-            if (checkpoint != null)
-            {
-                checkpoint.SetPlayerCheckpoint(this); // Set the player's checkpoint position
-            }
-        }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+      // if (collision.CompareTag("Checkpoint"))
+      //  {
+            //CheckpointScript checkpoint = collision.GetComponent<CheckpointScript>();
+        //    if (checkpoint != null)
+           // {
+              //  checkpoint.SetPlayerCheckpoint(this); // Set the player's checkpoint position
+            //}
+        */
     }
-}
+
