@@ -34,6 +34,8 @@ public class PlayerShoot : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
+
+            Debug.Log("bullet is in contact w enemy");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
