@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     public static bool GameOverScreen;
     public GameObject gameOver;
 
-    public static Vector2 lastCheckpointPosition = new Vector2 (-80,-1);
+    public static Vector2 lastCheckpointPosition = new Vector2 (-30, 16);
 
     private void Awake()
     {
@@ -33,14 +33,21 @@ public class PlayerManager : MonoBehaviour
         //if the game is over and player has collided with a hazard, the game over screen will show up. 
         if (GameOverScreen)
         {
+            Time.timeScale = 0;
             gameOver.SetActive(true);
             Debug.Log("testforgameover");
 
+        }
+        else
+        {
+            GameOverScreen = false;
+            Time.timeScale = 1;
         }
     }
 
     public void LevelReset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 }

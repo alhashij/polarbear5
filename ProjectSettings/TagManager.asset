@@ -10,11 +10,12 @@ TagManager:
   - checkpoint tag
   - Checkpoint
   - Enemy
+  - New tag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

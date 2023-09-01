@@ -22,11 +22,18 @@ public class Player : MonoBehaviour
     private bool isDashing = false;
     private float nextDashTime;
 
+    public LayerMask GroundLayer;
+
+
+    public LayerMask groundLayer; // Assign the ground layer in the Inspector
+    private bool isGrounded = false;
+
+
     //animator
     //bool walkRight = true;
 
     //Bullet gun variables
-   [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     //[Range(0.1f, 1f)]
     //[SerializeField] private float firerate = 0.5f;
@@ -54,6 +61,7 @@ public class Player : MonoBehaviour
         // Dash 
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= nextDashTime)
         {
+            Debug.Log("dashing");
             Dash(moveDirection);
             nextDashTime = Time.time + dashCooldown;
         }
@@ -89,6 +97,8 @@ public class Player : MonoBehaviour
         //walkRight = !walkRight;
        // transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
    // }
+
+
     private void playerShoot()
     {
         Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
@@ -98,6 +108,7 @@ public class Player : MonoBehaviour
     {
         if (!isDashing)
         {
+            Debug.Log("dash");
             isDashing = true;
             activeMoveSpeed = dashSpeed;
             dashCounter = dashLength;
@@ -130,8 +141,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    //private bool CheckGrounded()
+    //{
+    //    // Cast a ray to check if the player is grounded
+    //    RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
+    //    return hit.collider != null;
+    //}
 
-    //animator code
+        //animator code
 
 
-}
+    }
